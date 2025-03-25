@@ -75,13 +75,13 @@
 	<artifactId>maven-release-plugin</artifactId>
 	<version>3.0.0-M1</version>
 	<executions>
-        <execution>
-          <goals>
-            <goal>prepare</goal>
-            <goal>perform</goal>
-          </goals>
-        </execution>
-      </executions>
+          <execution>
+            <goals>
+              <goal>prepare</goal>
+              <goal>perform</goal>
+           </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
