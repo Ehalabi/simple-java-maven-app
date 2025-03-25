@@ -24,6 +24,9 @@ jobs:
           distribution: 'temurin'
           architecture: x64
 
+      - name: Increment patch version
+        run: mvn versions:increment -Dincrement=patch
+
       - name: Build with Maven
         run: mvn clean install
 
