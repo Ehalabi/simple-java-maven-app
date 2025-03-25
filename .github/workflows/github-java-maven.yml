@@ -27,7 +27,6 @@ jobs:
       - name: Increment patch version
         run: mvn build-helper:parse-version versions:set release:prepare -DdevelopmentVersion=${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.0-SNAPSHOT
 
-
       - name: Build with Maven
         run: mvn clean install
 
