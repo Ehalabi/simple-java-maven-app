@@ -23,6 +23,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           architecture: x64
+      
+
+      - name: Set Git user
+        run: |
+          git config --global user.email "ehalabi2@gmail.com"
+          git config --global user.name "Ehalabi"
 
       - name: Increment patch version
         run: mvn build-helper:parse-version versions:set release:prepare -DdevelopmentVersion =\${parsedVersion.majorVersion}.\${parsedVersion.nextMinorVersion}.0-SNAPSHOT release:perform
