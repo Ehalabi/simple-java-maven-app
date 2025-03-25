@@ -23,17 +23,13 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           architecture: x64
-      
 
-      - name: Set Git user
-        run: |
-          git config --global user.email "ehalabi2@gmail.com"
-          git config --global user.name "Ehalabi"
+      - name: Bump Version
+        id: bump
+        uses: nnichols/maven-version-bump-action@v3
+      - name: Print Version
+        run: "echo 'New Version: ${{steps.bump.outputs.version}}'"     
 
-      - name: Increment patch version
-        run: |
-          mvn build-helper:parse-version \
-              versions:set -DnewVersion="$(mvn help:evaluate -Dexpression=parsedVersion.majorVersion --quiet -DforceStdout).$(mvn help:evaluate -Dexpression=parsedVersion.nextMinorVersion --quiet -DforceStdout).0-SNAPSHOT"
 
       - name: Build with Maven
         run: mvn clean install

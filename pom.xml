@@ -6,14 +6,6 @@
   <version>1.1-SNAPSHOT</version>
   <name>my-app</name>
   <url>https://maven.apache.org</url>
-
-  <scm>
-    <connection>scm:git:https://github.com/Ehalabi/simple-java-maven-app.git</connection>
-    <developerConnection>scm:git:https://github.com/Ehalabi/simple-java-maven-app.git</developerConnection>
-    <url>https://github.com/Ehalabi/simple-java-maven-app</url>
-    <tag>HEAD</tag>
-  </scm>
-
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -76,26 +68,6 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-	<groupId>org.codehaus.mojo</groupId>
-	<artifactId>build-helper-maven-plugin</artifactId>
-	<version>1.12</version>
-	<executions>
-          <execution>
-            <goals>
-              <goal>parse-version</goal>
-           </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>3.0.0-M1</version> <!-- Make sure you use a valid and compatible version -->
-        <configuration>
-          <scmCommentPrefix>[ci skip]</scmCommentPrefix>
-        </configuration>
       </plugin>
     </plugins>
   </build>
