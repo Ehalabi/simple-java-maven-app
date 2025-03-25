@@ -72,7 +72,7 @@
       </plugin>
       <plugin>
 	<artifactId>maven-release-plugin</artifactId>
-        <version>XXX</version>
+        <version>3.0.0</version>
         <configuration>
             <scmCommentPrefix>[ci skip]</scmCommentPrefix>
         </configuration>
