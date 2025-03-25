@@ -82,6 +82,14 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M1</version> <!-- Make sure you use a valid and compatible version -->
+        <configuration>
+          <scmCommentPrefix>[ci skip]</scmCommentPrefix>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
